@@ -13,9 +13,79 @@
 	<link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>Template</h1>
+	<div id="mck-header">
+		<a href="" class="mck-brand">Mockup</a>
+		<div id="mck-header-toggle"></div>
+	</div>
+
+	<div id="mck-sidebar">
+		<div id="mck-sidebar-tabber">
+			<div class="mck-sidebar-tab current" data-tab="library" id="mck-sidebar-tab-library">
+				<span class="mck-sidebar-tab-icon"></span>
+				Library
+			</div>
+			<div class="mck-sidebar-tab" data-tab="properties" id="mck-sidebar-tab-properties">
+				<span class="mck-sidebar-tab-icon"></span>
+				Properties
+			</div>
+		</div>
+		<div id="mck-sidebar-container">
+			<div class="mck-sidebar-content current" id="mck-sidebar-content-library">
+				Library
+			</div>
+			<div class="mck-sidebar-content" id="mck-sidebar-content-properties">
+				<div id="mck-sprite-properties" style="display:none">
+					<h3>Sprite properties</h3>
+					<div class="mck-row">
+						<div id="mck-prop-x" class="mck-col mck-s6">
+							<span class="mck-label">x:</span>
+							<div class="mck-field"><span class="val"></span><input type="number" value=""/></div>
+						</div>
+						<div id="mck-prop-y" class="mck-col mck-s6">
+							<span class="mck-label">y:</span>
+							<div class="mck-field"><span class="val"></span><input type="number" value=""/></div>
+						</div>
+					</div>
+					<div class="mck-row">
+						<div id="mck-prop-width" class="mck-col mck-s6">
+							<span class="mck-label">width:</span>
+							<div class="mck-field"><span class="val"></span><input type="number" value=""/></div>
+						</div>
+						<div id="mck-prop-height" class="mck-col mck-s6">
+							<span class="mck-label">height:</span>
+							<div class="mck-field"><span class="val"></span><input type="number" value=""/></div>
+						</div>
+					</div>
+				</div>
+				<div id="mck-multiple-properties" style="display:none">Multiple selection</div>
+				<div id="mck-document-properties" style="display:none">Document	</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="mck-doc-tabber">
+		<div class="mck-doc-tab current">
+			<div class="mck-doc-tab-label">Untitled-1</div> <div class="mck-doc-tab-close" title="Close document">x</div>
+		</div>
+		<div class="mck-doc-tab">
+			<div class="mck-doc-tab-label">Untitled-2</div> <div class="mck-doc-tab-close" title="Close document">x</div>
+		</div>
+		<div class="mck-doc-tab">
+			<div class="mck-doc-tab-label">Untitled-3</div> <div class="mck-doc-tab-close" title="Close document">x</div>
+		</div>
+	</div>
+	<div id="mck-canvas-container">
+		<canvas id="mck-canvas" width="1000" height="1600"></canvas>
+	</div>
+	
 
 	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/mockup.js"></script>
+	<script src="js/document.js"></script>
+	<script src="js/page.js"></script>
+	<script src="js/sprite.js"></script>
+	<script src="js/selection.js"></script>
+	<script src="js/propertiesPanel.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
