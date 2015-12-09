@@ -8,7 +8,7 @@
 		var d = m.createDocument();
 
 		m.currentDocument.currentPage.addSprite();
-		m.toggleHeader().sidebarTab('properties');
+		//m.toggleHeader().sidebarTab('properties');
 
 
 

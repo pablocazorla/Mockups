@@ -1,0 +1,243 @@
+@font-size: 11px;
+
+@header-height:55px;
+
+@background-color: #FFF;
+@alt-color: #2DCC70;
+@color: #444;
+
+@color-danger: #F00;
+
+@background-color-dark: #47647E;
+@color-light:#f2f2f2;
+
+@border-color:#dfdfdf;
+
+@sidebar-width: 260px;
+
+@header-tools-width: 150px;
+@z-index: 100;
+
+@tab-height:30px;
+
+@border-radius:4px;
+
+@sidebar-tabber-height:45px;
+@sidebar-tabber-padding-top:10px;
+
+
+
+/*********************/
+html,body{
+	overflow: hidden;
+}
+body{
+	font-size: @font-size;
+	line-height: 1em;
+	font-family: 'Open Sans', 'Arial' ,sans-serif;
+	color: @color;
+	background-color: @background-color;
+}
+
+/* H ********************/
+h3{
+	font-size: 1.2 * @font-size;
+	line-height: 1em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+/* Header ********************/
+#mck-header{
+	position: fixed;z-index: @z-index;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: @header-height;
+	background-color: @background-color;
+	border-bottom: 1px solid @border-color;
+}
+.mck-brand{
+	line-height: @header-height;
+	height: @header-height;
+	width: @sidebar-width;
+	display: inline-block;
+	text-decoration: none;
+	padding: 0 10px;
+
+	
+}
+
+/* Sidebar *******************/
+#mck-sidebar{
+	position: fixed;
+	top: @header-height;
+	bottom: 0;
+	left:0;
+	width: @sidebar-width;
+	background-color: @background-color-dark;
+	color: @color-light;
+}
+#mck-sidebar-tabber{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right:0;
+	height:@sidebar-tabber-height + @sidebar-tabber-padding-top;
+	padding: @sidebar-tabber-padding-top 5px 0;
+	background-color: darken(@background-color-dark, 12%)
+}
+.mck-sidebar-tab{
+	float: left;
+	width: 50%;
+	height:@sidebar-tabber-height;
+	text-align: center;
+	line-height: @sidebar-tabber-height;
+	border-radius: @border-radius @border-radius 0 0;
+	cursor: pointer;
+}
+.mck-sidebar-tab .fa{
+	font-size: 1.5em;
+	margin-right: 5px;
+}
+.mck-sidebar-tab.current{
+	background-color: @background-color-dark;
+	cursor: default;
+}
+
+#mck-sidebar-container{
+	position: absolute;
+	top:@sidebar-tabber-height;bottom: 0;
+	right: 0;left: 0;
+	overflow: auto;
+}
+.mck-sidebar-content{
+	display: none;
+	padding: 20px 10px;
+	font-size: 11px;
+	line-height: 1em;
+}
+.mck-sidebar-content.current{
+	display: block;
+}
+
+
+
+/* Doc tabber ********************/
+#mck-doc-tabber{
+	position: fixed;z-index: @z-index + 1;
+	top: 0;
+	left: @sidebar-width;
+	right:@header-tools-width;
+	height:@header-height;
+	padding: 0;
+	padding-top: @header-height - @tab-height;
+}
+.mck-doc-tab{
+	position: relative;
+	display: inline-block;
+	background-color: darken(@background-color, 8%);
+	border: 1px solid @border-color;
+	height:@tab-height;
+	line-height: @tab-height;
+	padding: 0 25px 0 8px;
+	border-radius: @border-radius @border-radius 0 0;
+	cursor: pointer;
+	color: lighten(@color, 20%);
+}
+.mck-doc-tab.current{
+	background-color: @background-color;
+	border-bottom-color: @background-color;
+	cursor: default;
+	color: @color;
+}
+.mck-doc-tab-close{
+	position: absolute;
+	top:50%;right:4px;
+	display: block;
+	font-size: @font-size * 1.2;
+	width: 1em;height: 1em;
+	margin-top: -.5em;
+	padding-top: 1px;
+	text-align: center;
+	line-height: 12px;
+	cursor: pointer;
+	color: lighten(@color, 50%);
+}
+.mck-doc-tab-close:hover{
+	color:@color-danger;
+}
+
+/* Canvas Container *************/
+#mck-canvas-container{
+	position: fixed;
+	top: @header-height;
+	left: @sidebar-width;
+	bottom: 0px;
+	right:0;
+	background-color: #F2F2F2;
+	border-left:1px solid @border-color;
+	overflow: auto;
+}
+#mck-canvas{
+	background-color: #FFF;
+	border-right:1px solid @border-color;
+}
+
+
+/* Col **********************/
+.mck-row:before,.mck-row:after{content:"";display:table}
+.mck-row:after{clear:both}
+.mck-row{
+	zoom:1;
+	margin:0 -10px;
+}
+.mck-col{
+	padding: 0 10px;
+	float: left;
+	min-height: 20px;
+	margin-bottom: 10px;
+}
+.mck-s12{width: 100%;}
+.mck-s9{width: 75%;}
+.mck-s8{width: 66.66666666%;}
+.mck-s6{width: 50%;}
+.mck-s4{width: 33.33333333%;}
+.mck-s3{width: 25%;}
+
+/* MCK Properties ******************/
+.mck-label,
+.mck-field{
+	height: 20px;
+	line-height: 20px;
+	float:left;
+}
+
+.mck-label{
+	width: 40%;
+	text-align: right;
+	padding-right: 4px;
+}
+.mck-field{
+	position: relative;
+	width: 60%;
+	border: 1px solid #DDD;
+	font-size:9px;
+	padding: 0 4px; 
+}
+.mck-field .val,
+.mck-field input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+.mck-field .val{
+	cursor: pointer;
+}
+.mck-field input{
+	margin: 0;padding: 0;
+	border: solid 1px #CCC;
+	display: none;
+}
