@@ -1,6 +1,11 @@
 Mockup = (function($) {
 	'use strict';
 
+	// Request Animation Frames
+	window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
+		window.setTimeout(callback, 20);
+	};
+
 	var dom = false;
 
 	var headerOpen = true;
@@ -34,10 +39,13 @@ Mockup = (function($) {
 			return m;
 		},
 		observable: function(vInitial) {
-			var f = function(v) {
+			var f = function(v,running) {
+				var r = running || 'run';
 				if (typeof v !== 'undefined' && v !== f.val) {
 					f.val = v;
-					run();
+					if(r === 'run'){
+						run();
+					}					
 				}
 				return this.val;
 			};
@@ -67,14 +75,18 @@ Mockup = (function($) {
 			};
 			return f;
 		},
+		capitalize: function(string) {
+			return string.charAt(0).toUpperCase() + string.slice(1);
+		},
 		render: function() {
-			var r = function() {
-				if (typeof m.currentDocument !== null) {
+			var renderCanvas = function() {
+				if (m.currentDocument !== null) {
 					m.c.clearRect(0, 0, m.canvas.width, m.canvas.height);
 					m.currentDocument.render();
 				}
+				window.requestAnimationFrame(renderCanvas);
 			};
-			setInterval(r, 30);
+			renderCanvas();
 		}
 	};
 
