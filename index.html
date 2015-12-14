@@ -1,77 +1,75 @@
 <!doctype HTML>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Mockups</title>
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-	<!-- CSS -->
-	<link type="text/css" rel="stylesheet" href="css/reset.css">
-	<link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet/less" type="text/css" href="css/style.less" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mockups</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <!-- CSS -->
+  <link type="text/css" rel="stylesheet" href="css/reset.css">
+  <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet/less" type="text/css" href="css/style.less" />
 </head>
+
 <body>
-	<div id="mck-header">
-		<a href="" class="mck-brand">Mockup</a>
-		<div id="mck-header-toggle"></div>
-	</div>
-
-	<div id="mck-doc-tabber">
-		<div class="mck-doc-tab current">
-			<div class="mck-doc-tab-label">Untitled-1</div><i class="mck-doc-tab-close fa fa-times-circle"  title="Close document"></i>
-		</div>
-		<div class="mck-doc-tab">
-			<div class="mck-doc-tab-label">Untitled-2</div><i class="mck-doc-tab-close fa fa-times-circle"  title="Close document"></i>
-		</div>
-		<div class="mck-doc-tab">
-			<div class="mck-doc-tab-label">Untitled-3</div><i class="mck-doc-tab-close fa fa-times-circle"  title="Close document"></i>
-		</div>
-	</div>
-
-	<div id="mck-sidebar">
-		<div id="mck-sidebar-tabber">
-			<div class="mck-sidebar-tab current" data-tab="library" id="mck-sidebar-tab-library">
-				<i class="fa fa-folder-open"></i> Library
-			</div>
-			<div class="mck-sidebar-tab" data-tab="properties" id="mck-sidebar-tab-properties">
-				<i class="fa fa-wrench"></i> Properties
-			</div>
-		</div>
-		<div id="mck-sidebar-container">
-			<div class="mck-sidebar-content current" id="mck-sidebar-content-library">
-				Library
-			</div>
-			<div class="mck-sidebar-content" id="mck-sidebar-content-properties">
-				<div id="mck-sprite-properties" style="display:none">
-					<h3 id="mck-sprite-properties-title">Sprite properties</h3>
-					<div class="mck-row" id="mck-sprite-properties-row">dsfdsfsd</div>					
-				</div>
-				<div id="mck-multiple-properties" style="display:none">Multiple selection</div>
-				<div id="mck-document-properties" style="display:none">Document	</div>
-			</div>
-		</div>
-	</div>
-	
-	
-	<div id="mck-canvas-container">
-		<canvas id="mck-canvas" width="1000" height="1600"></canvas>
-	</div>
-	
-
-	<script src="js/libs/less.min.js"></script>
-	<script src="js/libs/jquery-1.11.2.min.js"></script>
-
-	<script src="js/mockup.js"></script>
-	<script src="js/document.js"></script>
-	<script src="js/page.js"></script>
-	<script src="js/sprite.js"></script>
-	<script src="js/selection.js"></script>
-	<script src="js/propertiesPanel.js"></script>
-	<script src="js/app.js"></script>
+  <div id="mck-header">
+    <a href="" class="mck-brand">Mockup</a>
+    <div id="mck-header-toggle"></div>
+  </div>
+  <div id="mck-doc-tabber">
+    <div class="mck-doc-tab" id="mck-doc-tab-plus">
+      <i class="fa fa-plus"></i> New document
+    </div>
+  </div>
+  <div id="mck-sidebar">
+    <div id="mck-sidebar-tabber">
+      <div class="mck-sidebar-tab current" data-tab="library" id="mck-sidebar-tab-library">
+        <i class="fa fa-folder-open"></i> Library
+      </div>
+      <div class="mck-sidebar-tab" data-tab="properties" id="mck-sidebar-tab-properties">
+        <i class="fa fa-wrench"></i> Properties
+      </div>
+    </div>
+    <div id="mck-sidebar-container">
+      <div class="mck-sidebar-content current" id="mck-sidebar-content-library">
+        Library
+      </div>
+      <div class="mck-sidebar-content" id="mck-sidebar-content-properties">
+        <div id="mck-sprite-properties" style="display:none">
+          <h3 id="mck-sprite-properties-title">Sprite properties</h3>
+          <div class="mck-row" id="mck-sprite-properties-row">dsfdsfsd</div>
+        </div>
+        <div id="mck-multiple-properties" style="display:none">Multiple selection</div>
+        <div id="mck-document-properties" style="display:none">Document </div>
+      </div>
+    </div>
+  </div>
+  <div id="mck-canvas-container">
+    <canvas id="mck-canvas" width="1400" height="1600"></canvas>
+  </div>
+  <div id="mck-modal">
+    <div id="mck-modal-dimmer"></div>
+    <div id="mck-modal-body">
+      <i id="mck-modal-close" class="fa fa-times" title="Close"></i>
+      <h2 id="mck-modal-title"></h2>
+      <div id="mck-modal-content"></div>
+      <div id="mck-modal-actions"></div>
+    </div>
+    <script src="js/libs/less.min.js"></script>
+    <script src="js/libs/jquery-1.11.2.min.js"></script>
+    <script src="js/mockup.js"></script>
+    <script src="js/document.js"></script>
+    <script src="js/doc-tabber.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/sprite.js"></script>
+    <script src="js/selection.js"></script>
+    <script src="js/propertiesPanel.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>

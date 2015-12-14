@@ -5,11 +5,11 @@
 
 		
 
-		var d = m.createDocument();
+		/*var d = m.createDocument();
 
 		m.currentDocument.currentPage.addSprite();
 		m.sidebarTab('properties');
-
+*/
 
 
 

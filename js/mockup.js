@@ -21,6 +21,7 @@ Mockup = (function($) {
 				m.$canvas = $('#' + m.cfg.canvasId);
 				m.canvas = m.$canvas[0];
 				m.c = m.canvas.getContext('2d');
+				m.$window = $(window);
 
 				/* Sidebar Tabs **********/
 				m.$mckSidebarTab = $('.mck-sidebar-tab');
@@ -30,6 +31,12 @@ Mockup = (function($) {
 				m.$mckSidebarContent = $('.mck-sidebar-content');
 				m.render();
 				m.propertiesPanel.init();
+
+				/* Modal *****************/
+				m.Modal.init();
+
+				/* Doc Tabber *****************/
+				m.docTabber.init();
 			}
 			return m;
 		},
